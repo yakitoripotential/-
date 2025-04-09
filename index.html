@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山岳部へようこそ！ - 西高山岳部新歓</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .floating-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .floating-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <i class="fas fa-mountain text-green-600 text-3xl mr-2"></i>
+                            <span class="font-semibold text-green-600 text-lg">山岳部</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#about" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">部活紹介</a>
+                        <a href="#features" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">ここが良い</a>
+                        <a href="#schedule" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">活動内容</a>
+                        <a href="#members" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">部員構成</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <!-- Contact button removed -->
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul class>
+                <li class="active"><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">部活紹介</a></li>
+                <li><a href="#features" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">ここが良い</a></li>
+                <li><a href="#schedule" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">活動内容</a></li>
+                <li><a href="#members" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">部員構成</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image h-screen flex items-center justify-center">
+        <div class="text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">西高山岳部へようこそ</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">登山だけでなく、温泉やBBQも楽しめる最高の部活</p>
+            <a href="#about" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block animate-fade-in" style="animation-delay: 0.4s;">
+                詳しく見る <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">部活動紹介</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">山岳部は生徒11人、女子2人で活動しており、アットホームな雰囲気が特徴です。登山だけでなく、自然を楽しむ様々なアクティビティを体験できます。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-users text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">複数校合同活動</h3>
+                    <p class="text-gray-600">南高、北高との合同活動で、他校の友達もたくさん作れます。交流の輪が広がります。</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-heartbeat text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">柔軟な活動スタイル</h3>
+                    <p class="text-gray-600">自分の都合に合わせて活動頻度を調整できます。勉強と部活の両立もしやすいです。</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-fire text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">年間4回キャンプ</h3>
+                    <p class="text-gray-600">年間4回のキャンプを開催！温泉やBBQも楽しめる特別な思い出を作れます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-green-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">山岳部のここが良い</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">私たちが誇る、山岳部の特徴をご紹介します</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="flex items-start mb-8">
+                        <div class="text-green-600 mr-4 mt-1">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">登山以上の楽しみ</h3>
+                            <p class="text-gray-600">遠出する時は温泉やキャンプ、バーベキューなど楽しめるのは登山だけじゃありません。多様なアクティビティで充実した時間を過ごせます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-8">
+                        <div class="text-green-600 mr-4 mt-1">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">柔軟な活動スケジュール</h3>
+                            <p class="text-gray-600">人数が少なく緩めに活動しているので、自分の都合に合わせて活動頻度を調節できます。無理なく続けられる環境です。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex items-start mb-8">
+                        <div class="text-green-600 mr-4 mt-1">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">他校交流の機会</h3>
+                            <p class="text-gray-600">南高、北高など山岳部がある他の高校の人と交流ができて、他校に友達ができます。広い人脈を作るチャンスです。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-8">
+                        <div class="text-green-600 mr-4 mt-1">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">勉強との両立</h3>
+                            <p class="text-gray-600">平日は他の運動部に比べて早く帰宅できて、適度な運動強度なので勉強との両立が可能です。文武両道を目指せます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg floating-card inline-block max-w-2xl">
+                    <i class="fas fa-quote-left text-green-600 text-3xl mb-6"></i>
+                    <p class="text-xl text-gray-700 mb-6 italic">「山岳部に入ってからキャンプをしたり、綺麗な景色をたくさん見れたりして一生の思い出がたくさんできました！修学旅行たくさん行ってる感じです笑」</p>
+                    <p class="text-gray-600">- 新２年 佐藤</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">活動内容</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">無理のない活動スケジュールで、充実した高校生活を送れます</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg floating-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">週間スケジュール</h3>
+                        <div class="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">定例</div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <span class="font-medium">平日</span>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">週4回</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <span class="font-medium">土日</span>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">2週間に1回</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">活動時間</h4>
+                        <div class="bg-white p-4 rounded-lg shadow-inner">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-medium">開始</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">15:30</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">終了</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">17:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg floating-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">年間イベント</h3>
+                        <div class="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">特別</div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-campground"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">合宿キャンプ</h4>
+                                <p class="text-sm text-gray-600">年間4回（春〜秋）実施</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-hiking"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">遠征登山</h4>
+                                <p class="text-sm text-gray-600">他校との合同登山や遠征</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">キャンプ飯</h4>
+                                <p class="text-sm text-gray-600">みんなとワイワイ作る</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-hot-tub"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">温泉旅行</h4>
+                                <p class="text-sm text-gray-600">登山後の疲労回復</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="py-20 bg-green-50 parallax" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/members-bg.jpg');">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">部員構成</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">和気あいあいとしたアットホームな雰囲気です</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 text-5xl mb-6">
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-male ml-1"></i>
+                        <i class="fas fa-male ml-1"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">男子部員</h3>
+                    <p class="text-4xl font-bold text-green-600 mb-4">10人</p>
+                    <p class="text-gray-600">学年を超えて仲が良く、先輩後輩の隔たりが少ないのが特徴です。</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 text-5xl mb-6">
+                        <i class="fas fa-female"></i>
+                        <i class="fas fa-female ml-1"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">女子部員</h3>
+                    <p class="text-4xl font-bold text-green-600 mb-4">2人</p>
+                    <p class="text-gray-600">少人数ですが、アットホームな雰囲気で楽しく活動しています。</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg floating-card text-center">
+                    <div class="text-green-600 text-5xl mb-6">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">他校交流</h3>
+                    <div class="mb-4">
+                        <span class="text-green-600 font-bold text-4xl">+</span>
+                        <span class="text-4xl font-bold mx-2">6校</span>
+                    </div>
+                    <p class="text-gray-600">合同イベントや大会で、他校の山岳部員と交流できます。</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto floating-card">
+                <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">先輩の声</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center mr-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">3年生 戸井津くん</h4>
+                                <p class="text-sm text-gray-500">部長</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">スポーツ経験がないけど体を動かしたい人にはうってつけな部活となってます！山岳の経験がなくても絶対に楽しめる部活となってるので是非きて欲しいです</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center mr-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">2年生 佐藤さん</h4>
+                                <p class="text-sm text-gray-500">女子部員</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">「勉強との両立がしやすく、無理なく続けられています。登山だけでなくBBQやキャンプも楽しみの一つです！」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-16">活動の様子</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg aspect-square">
+                    <img src="images/gallery-1.jpg" alt="登山" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg aspect-square">
+                    <img src="images/gallery-2.jpg" alt="キャンプ" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg aspect-square">
+                    <img src="images/gallery-3.jpg" alt="BBQ" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg aspect-square">
+                    <img src="images/gallery-4.jpg" alt="温泉" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- お問い合わせ Section -->
+    <section id="contact" class="py-20 bg-green-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">お問い合わせ</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg floating-card max-w-3xl mx-auto text-center">
+                <div class="text-green-600 mb-6">
+                    <i class="fas fa-envelope text-5xl"></i>
+                </div>
+                <p class="text-xl text-gray-700 mb-4">不明な点があれば</p>
+                <p class="text-lg text-gray-800 font-medium mb-2">3年2組 といつそうた部長</p>
+                <p class="text-lg text-gray-800 font-medium">2年１組 佐藤、孫崎</p>
+                <p class="text-lg text-gray-700 mt-4">にお問い合わせください</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start items-center mb-6 md:mb-0">
+                    <i class="fas fa-mountain text-green-500 text-3xl mr-2"></i>
+                    <span class="text-xl font-bold">札幌西高校山岳部</span>
+                </div>
+                
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-green Shepherd-500">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center md:text-left">
+                <p class="text-gray-400 text-sm">&copy; 2025 高校山岳部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" class="fixed bottom-8 right-8 bg-green-600 hover:bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTopBtn');
+        
+        window.onscroll = function() {
+            scrollFunction();
+        };
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        }
+        
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Contact form submission event listener removed
+    </script>
+</body>
+</html>
